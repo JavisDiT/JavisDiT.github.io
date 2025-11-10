@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="JavisDiT: Joint Audio-Video Diffusion Transformer with Hierarchical Spatio-Temporal Prior Synchronization">
+    <meta name="keywords" content="text-to-audio-video generation, joint audio-video generation, audio-video synchronization, diffusion transformer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavisDiT</title> 
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+    <link rel="icon" href="./static/images/logo.png">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!-- Title -->
+                    <h1 class="title is-1 publication-title" style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;">
+                        <img src="./static/images/logo.png" width="80" height="80" style="margin-right: 10px;">JavisDiT:
+                    </h1>
+                    <h2 class="title publication-title">Joint Audio-Video Diffusion Transformer with <br> Hierarchical Spatio-Temporal Prior Synchronization</h2>
+
+                    <!-- Authors -->
+                    <div class="is-size-5 publication-authors">   
+                        <span class="author-block"><a href="https://kail8.github.io/">Kai Liu</a><sup>1,2</sup>,</span>
+                        <span class="author-block"><a href="#">Wei Li</a><sup>3</sup>,</span>
+                        <span class="author-block"><a href="#">Lai Chen</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://sqwu.top/">Shengqiong Wu</a><sup>2</sup>,</span>
+                        <span class="author-block"><a href="#">Yanhao Zheng</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://scholar.google.com/citations?user=xp_rICcAAAAJ&hl=zh-CN/">Jiayi Ji</a><sup>2</sup>,</span>
+                        <br>
+                        <span class="author-block"><a href="#">Fan Zhou</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="#">Rongxin Jiang</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a><sup>4</sup>,</span>
+                        <span class="author-block"><a href="https://haofei.vip/">Hao Fei</a><sup>2*</sup>,</span>
+                        <span class="author-block"><a href="https://www.chuatatseng.com/">Tat-Seng Chua</a><sup>2</sup>,</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                        <!-- <b style="color:#f68946; font-weight:normal">▶ </b> -->
+                        <span class="author-block" style="font-size: 18px;"><sup>1</sup> Zhejiang University,</span>
+                        <span class="author-block" style="font-size: 18px;"><sup>2</sup> National University of Singapore,</span>
+                        <br>
+                        <span class="author-block" style="font-size: 18px;"><sup>3</sup> University of Science and Technology of China,</span>
+                        <span class="author-block" style="font-size: 18px;"><sup>4</sup> University of Rochester</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block" style="font-size: 15px;">Work in progress (<sup>*</sup>Correspondence)</span>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <span class="link-block">
+                                <a href="https://arxiv.org/pdf/2503.23377.pdf" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                    <span>ArXiv Paper</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://huggingface.co/papers/2503.23377" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fa fa-archive"></i></span>
+                                    <span>HF Paper</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://github.com/JavisVerse/JavisDiT-Code" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fab fa-github"></i></span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://huggingface.co/collections/JavisDiT/javisdit-v01" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fa fa-laugh"></i></span>
+                                    <span>Model</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://huggingface.co/JavisDiT/datasets" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fa fa-database"></i></span>
+                                    <span>Data</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://www.youtube.com/watch?v=F45hnFmjeHk" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fab fa-youtube"></i></span>
+                                    <span>Video</span>
+                                </a>
+                            </span>
+
+                            <!-- <span class="link-block">
+                                <a href="https://447c629bc8648ce599.gradio.live" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fa fa-laugh"></i></span>
+                                    <span>Gradio Demo</span>
+                                </a>
+                            </span> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <p style="font-size: 22px;">
+                    The project page of <b>JavisDiT</b> has been moved to <span><a href="https://JavisVerse.github.io/JavisDiT-page">this URL</a></span>. Click to see the updates!
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p style="text-align: center;">
+                        The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
